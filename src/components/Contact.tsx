@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000";
+const WHATSAPP_URL = "https://wa.me/5513982146930";
 
 const Contact = () => {
   const ref = useScrollReveal();
@@ -67,7 +67,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="scroll-reveal">
               <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">WhatsApp</p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-foreground font-display text-2xl hover:text-foreground/80 transition-colors">(00) 00000-0000</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-foreground font-display text-2xl hover:text-foreground/80 transition-colors">(13) 98214-6930</a>
             </div>
             <div className="scroll-reveal">
               <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Horário</p>

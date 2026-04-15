@@ -5,7 +5,6 @@ import About from "@/components/About";
 import Process from "@/components/Process";
 import Care from "@/components/Care";
 import Biosafety from "@/components/Biosafety";
-import Instagram from "@/components/Instagram";
 import CTAFinal from "@/components/CTAFinal";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -20,7 +19,6 @@ const Index = () => (
     <Process />
     <Care />
     <Biosafety />
-    <Instagram />
     <CTAFinal />
     <Contact />
     <Footer />

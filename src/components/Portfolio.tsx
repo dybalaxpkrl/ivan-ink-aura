@@ -2,35 +2,25 @@ import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-import bw1 from "@/assets/portfolio-blackwork-1.jpg";
-import bw2 from "@/assets/portfolio-blackwork-2.jpg";
-import dw1 from "@/assets/portfolio-dotwork-1.jpg";
-import dw2 from "@/assets/portfolio-dotwork-2.jpg";
-import bg1 from "@/assets/portfolio-blackgray-1.jpg";
-import bg2 from "@/assets/portfolio-blackgray-2.jpg";
-
-const categories = [
-  { id: "all", label: "Todos" },
-  { id: "blackwork", label: "Blackwork" },
-  { id: "dotwork", label: "Pontilhismo" },
-  { id: "blackgray", label: "Preto e Cinza" },
-];
+import pSolange from "@/assets/p-solange.jpg";
+import pSamurai from "@/assets/p-samurai.jpg";
+import pOwl from "@/assets/p-owl.jpg";
+import pNeck from "@/assets/p-neck.jpg";
+import pVegeta from "@/assets/p-vegeta.jpg";
+import pZeus from "@/assets/p-zeus.jpg";
 
 const works = [
-  { src: bw1, cat: "blackwork", title: "Geometria Sagrada", w: 800, h: 1024 },
-  { src: dw1, cat: "dotwork", title: "Mandala Dotwork", w: 800, h: 1024 },
-  { src: bg1, cat: "blackgray", title: "Leão Realista", w: 800, h: 1024 },
-  { src: bw2, cat: "blackwork", title: "Ornamental", w: 1024, h: 800 },
-  { src: bg2, cat: "blackgray", title: "Skull & Roses", w: 800, h: 1024 },
-  { src: dw2, cat: "dotwork", title: "Sleeve Pontilhismo", w: 1024, h: 800 },
+  { src: pSolange, title: "Coruja Oriental", w: 800, h: 1024 },
+  { src: pSamurai, title: "Lettering no Pescoço", w: 800, h: 1024 },
+  { src: pOwl, title: "Samurai", w: 800, h: 1024 },
+  { src: pNeck, title: "Vegeta Anime", w: 800, h: 1024 },
+  { src: pVegeta, title: "Lettering no Peito", w: 800, h: 1024 },
+  { src: pZeus, title: "Mitologia Zeus", w: 800, h: 1024 },
 ];
 
 const Portfolio = () => {
-  const [active, setActive] = useState("all");
   const [selected, setSelected] = useState<number | null>(null);
   const ref = useScrollReveal();
-
-  const filtered = active === "all" ? works : works.filter((w) => w.cat === active);
 
   return (
     <section id="portfolio" className="py-24 sm:py-32 px-6" ref={ref}>
@@ -40,26 +30,11 @@ const Portfolio = () => {
           <h2 className="font-display text-5xl sm:text-7xl text-foreground">TRABALHOS</h2>
         </div>
 
-        {/* Filters */}
-        <div className="scroll-reveal flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((c) => (
-            <button
-              key={c.id}
-              onClick={() => setActive(c.id)}
-              className={`px-5 py-2 text-xs tracking-widest uppercase border transition-all duration-300 ${
-                active === c.id
-                  ? "border-foreground text-foreground bg-foreground/5"
-                  : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
-              }`}
-            >
-              {c.label}
-            </button>
-          ))}
-        </div>
+
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((work, i) => (
+          {works.map((work, i) => (
             <div
               key={`${work.src}-${i}`}
               className="scroll-reveal group relative overflow-hidden cursor-pointer bg-card"

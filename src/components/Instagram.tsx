@@ -1,12 +1,12 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import bw1 from "@/assets/portfolio-blackwork-1.jpg";
-import dw1 from "@/assets/portfolio-dotwork-1.jpg";
-import bg1 from "@/assets/portfolio-blackgray-1.jpg";
-import bw2 from "@/assets/portfolio-blackwork-2.jpg";
-import bg2 from "@/assets/portfolio-blackgray-2.jpg";
-import dw2 from "@/assets/portfolio-dotwork-2.jpg";
+import pSolange from "@/assets/p-solange.jpg";
+import pSamurai from "@/assets/p-samurai.jpg";
+import pOwl from "@/assets/p-owl.jpg";
+import pNeck from "@/assets/p-neck.jpg";
+import pVegeta from "@/assets/p-vegeta.jpg";
+import pZeus from "@/assets/p-zeus.jpg";
 
-const posts = [bw1, dw1, bg1, bw2, bg2, dw2];
+const posts = [pSolange, pSamurai, pOwl, pNeck, pVegeta, pZeus];
 
 const Instagram = () => {
   const ref = useScrollReveal();

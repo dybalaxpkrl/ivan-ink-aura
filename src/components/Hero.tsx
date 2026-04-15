@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Gostaria de agendar uma tatuagem.";
+const WHATSAPP_URL = "https://wa.me/5513982146930?text=vim%20pelo%20site%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%21";
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);

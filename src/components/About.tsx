@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import ivanPortrait from "@/assets/ivan-portrait.jpg";
+import ivanPortrait from "@/assets/ivan-portrait-v2.jpg";
 
 const About = () => {
   const ref = useScrollReveal();
